@@ -1,0 +1,12 @@
+package http.tasktracksystem;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TaskTrackSystem {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TaskTrackSystem.class, args);
+    }
+}

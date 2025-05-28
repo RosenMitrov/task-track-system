@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: task-track-system
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/application_one
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+
+  liquibase:
+    enabled: true
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+auth:
+  token:
+    # execute below command in wsl in order to get JWT some secret
+    #echo -n "some jwt message here" | openssl dgst -sha256 -mac HMAC -macopt key:key.bin
+    jwtSecret: ${JWT_SECRET}
+    expirationInMils: 72000000
+
+server:
+  port: 9090

@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  liquibase:
+    enabled: false  # Optional: if you want to skip liquibase for contextLoads()
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+
+auth:
+  token:
+    jwtSecret: testsecret
+    expirationInMils: 72000000

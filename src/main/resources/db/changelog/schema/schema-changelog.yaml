@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: tables/create_roles.sql
+  - changeSet:
+      id: 2
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: tables/create_users.sql
+  - changeSet:
+      id: 3
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: tables/create_user_roles.sql
+  - changeSet:
+      id: 4
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: tables/create_task_groups.sql
+  - changeSet:
+      id: 5
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: tables/create_tasks.sql
+  - changeSet:
+      id: 6
+      author: rosenmitrov
+      changes:
+        - sqlFile:
+            relativeToChangelogFile: true
+            path: inserts/init.sql
+
