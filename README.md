@@ -15,6 +15,7 @@ This is a Spring Boot-based RESTful API application designed to manage users,
 - **User API**
     - User registration with input validation.
     - User deletion restricted to administrators.
+    - User applies role changes to a user, restricted to administrators
 
 - **Task API**
     - Create, update, and assign tasks to users.
